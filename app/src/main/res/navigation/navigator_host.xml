@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigator_host"
+    app:startDestination="@id/question_1">
+    <fragment
+        android:id="@+id/question_1"
+        android:name="android.inflabnet.perfildoinvestidor.fragments.Question_1"
+        android:label="fragment_question_2"
+        tools:layout="@layout/fragment_question_2" >
+        <action
+            android:id="@+id/action_question_1_to_question_2"
+            app:destination="@id/question_2" />
+    </fragment>
+    <fragment
+        android:id="@+id/question_2"
+        android:name="android.inflabnet.perfildoinvestidor.fragments.Question_2"
+        android:label="fragment_question_2"
+        tools:layout="@layout/fragment_question_2" >
+        <action
+            android:id="@+id/action_question_2_to_question_1"
+            app:destination="@id/question_1" />
+        <action
+            android:id="@+id/action_question_2_to_question_3"
+            app:destination="@id/question_3" />
+    </fragment>
+    <fragment
+        android:id="@+id/question_3"
+        android:name="android.inflabnet.perfildoinvestidor.fragments.Question_3"
+        android:label="fragment_question_3"
+        tools:layout="@layout/fragment_question_3" >
+        <action
+            android:id="@+id/action_question_3_to_question_2"
+            app:destination="@id/question_2" />
+        <action
+            android:id="@+id/action_question_3_to_question_4"
+            app:destination="@id/question_4" />
+    </fragment>
+    <fragment
+        android:id="@+id/question_4"
+        android:name="android.inflabnet.perfildoinvestidor.fragments.Question_4"
+        android:label="fragment_question_4"
+        tools:layout="@layout/fragment_question_4" >
+        <action
+            android:id="@+id/action_question_4_to_question_3"
+            app:destination="@id/question_3" />
+        <action
+            android:id="@+id/action_question_4_to_question_5"
+            app:destination="@id/question_5" />
+    </fragment>
+    <fragment
+        android:id="@+id/question_5"
+        android:name="android.inflabnet.perfildoinvestidor.fragments.Question_5"
+        android:label="fragment_question_5"
+        tools:layout="@layout/fragment_question_5" >
+        <action
+            android:id="@+id/action_question_5_to_question_4"
+            app:destination="@id/question_4" />
+        <action
+            android:id="@+id/action_question_5_to_question_6"
+            app:destination="@id/question_6" />
+    </fragment>
+    <fragment
+        android:id="@+id/question_6"
+        android:name="android.inflabnet.perfildoinvestidor.fragments.Question_6"
+        android:label="fragment_question_6"
+        tools:layout="@layout/fragment_question_6" >
+        <action
+            android:id="@+id/action_question_6_to_question_5"
+            app:destination="@id/question_5" />
+        <action
+            android:id="@+id/action_question_6_to_question_7"
+            app:destination="@id/question_7" />
+    </fragment>
+    <fragment
+        android:id="@+id/question_7"
+        android:name="android.inflabnet.perfildoinvestidor.fragments.Question_7"
+        android:label="fragment_question_7"
+        tools:layout="@layout/fragment_question_7" >
+        <action
+            android:id="@+id/action_question_7_to_question_6"
+            app:destination="@id/question_6" />
+        <action
+            android:id="@+id/action_question_7_to_question_8"
+            app:destination="@id/question_8" />
+    </fragment>
+    <fragment
+        android:id="@+id/question_8"
+        android:name="android.inflabnet.perfildoinvestidor.fragments.Question_8"
+        android:label="fragment_question_8"
+        tools:layout="@layout/fragment_question_8" >
+        <action
+            android:id="@+id/action_question_8_to_question_7"
+            app:destination="@id/question_7" />
+        <action
+            android:id="@+id/action_question_8_to_question_9"
+            app:destination="@id/question_9" />
+    </fragment>
+    <fragment
+        android:id="@+id/question_9"
+        android:name="android.inflabnet.perfildoinvestidor.fragments.Question_9"
+        android:label="fragment_question_9"
+        tools:layout="@layout/fragment_question_9" >
+        <action
+            android:id="@+id/action_question_9_to_question_8"
+            app:destination="@id/question_8" />
+        <action
+            android:id="@+id/action_question_9_to_question_10"
+            app:destination="@id/question_10" />
+    </fragment>
+    <fragment
+        android:id="@+id/question_10"
+        android:name="android.inflabnet.perfildoinvestidor.fragments.Question_10"
+        android:label="fragment_question_10"
+        tools:layout="@layout/fragment_question_10" >
+        <action
+            android:id="@+id/action_question_10_to_question_11"
+            app:destination="@id/question_11" />
+        <action
+            android:id="@+id/action_question_10_to_question_9"
+            app:destination="@id/question_9" />
+    </fragment>
+    <fragment
+        android:id="@+id/question_11"
+        android:name="android.inflabnet.perfildoinvestidor.fragments.Question_11"
+        android:label="fragment_question_11"
+        tools:layout="@layout/fragment_question_11" >
+        <action
+            android:id="@+id/action_question_11_to_question_10"
+            app:destination="@id/question_10" />
+    </fragment>
+</navigation>
