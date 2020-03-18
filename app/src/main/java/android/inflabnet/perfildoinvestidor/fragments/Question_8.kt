@@ -39,6 +39,10 @@ class Question_8 : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
+        btnQuadro8.setOnClickListener {
+            findNavController().navigate(R.id.action_question_8_to_imageQ8)
+        }
+
         var questionsViewModel: QuestoesViewModel? = null
         activity?.let {
             questionsViewModel = ViewModelProviders.of(it)[QuestoesViewModel::class.java]

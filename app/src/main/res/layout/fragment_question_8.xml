@@ -77,6 +77,17 @@
         app:layout_constraintTop_toBottomOf="@+id/radioGroup" />
 
     <Button
+        android:id="@+id/btnQuadro8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginLeft="32dp"
+        android:layout_marginTop="32dp"
+        android:text="QUADRO 8"
+        app:layout_constraintStart_toEndOf="@+id/btnProxQuest"
+        app:layout_constraintTop_toBottomOf="@+id/txtQuestion" />
+
+    <Button
         android:id="@+id/btnOk2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -92,10 +103,10 @@
         android:id="@+id/txtResult"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="73dp"
-        android:layout_marginLeft="73dp"
-        android:layout_marginTop="45dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginLeft="32dp"
+        android:layout_marginTop="38dp"
         android:text="TextView"
         app:layout_constraintStart_toEndOf="@+id/btnProxQuest"
-        app:layout_constraintTop_toBottomOf="@+id/radioGroup" />
+        app:layout_constraintTop_toBottomOf="@+id/btnQuadro8" />
 </androidx.constraintlayout.widget.ConstraintLayout>

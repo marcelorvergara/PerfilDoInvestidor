@@ -92,10 +92,21 @@
         android:id="@+id/txtResult"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="65dp"
-        android:layout_marginLeft="65dp"
-        android:layout_marginTop="40dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginLeft="32dp"
+        android:layout_marginTop="38dp"
         android:text="TextView"
         app:layout_constraintStart_toEndOf="@+id/btnProxQuest"
-        app:layout_constraintTop_toBottomOf="@+id/radioGroup" />
+        app:layout_constraintTop_toBottomOf="@+id/btnQuadro9" />
+
+    <Button
+        android:id="@+id/btnQuadro9"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginLeft="32dp"
+        android:layout_marginTop="32dp"
+        android:text="QUADRO 9"
+        app:layout_constraintStart_toEndOf="@+id/btnProxQuest"
+        app:layout_constraintTop_toBottomOf="@+id/txtQuestion" />
 </androidx.constraintlayout.widget.ConstraintLayout>

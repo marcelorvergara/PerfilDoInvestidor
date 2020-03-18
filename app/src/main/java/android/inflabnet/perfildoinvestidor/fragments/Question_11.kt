@@ -117,8 +117,8 @@ class Question_11 : Fragment() {
                 val resultadoTotal = questionsViewModel!!.resultado
                 val perfil : String
                 perfil = when(resultadoTotal){
-                    in 0..12 -> "Conservador"
-                    in 13..29 -> "Maderado"
+                    in 0..14 -> "Conservador"
+                    in 15..35 -> "Maderado"
                     else -> "Arrojado"
                 }
                 //Toast.makeText(this.context!!.applicationContext, questionsViewModel!!.nome, Toast.LENGTH_SHORT).show()

@@ -28,9 +28,9 @@ class QuestoesViewModel : ViewModel() {
 
             Questoes(2,"3. Qual das alternativas melhor classica sua formação e experiência com o mercado financeiro?",
                 " Não possuo formação acadêmica ou conhecimento do mercado fnanceiro",
-                " Possuo formação acadêmica na área  nanceira, mas não tenho experiência com o mercado fnanceiro",
+                " Possuo formação acadêmica na área financeira, mas não tenho experiência com o mercado fnanceiro",
                 " Possuo formação acadêmica em outra área, mas possuo conhecimento do mercado fnanceiro",
-                " Possuo formação acadêmica na área  nanceira ou pleno conhecimento do mercado fnanceiro",
+                " Possuo formação acadêmica na área financeira ou pleno conhecimento do mercado fnanceiro",
                 "vazio",
                 gabarito = mapOf ("a" to 0, "b" to 1,"c" to 2,"d" to 4,"e" to 0)),
             
@@ -48,8 +48,8 @@ class QuestoesViewModel : ViewModel() {
                 gabarito = mapOf ("a" to 0, "b" to 2,"c" to 4,"d" to 0,"e" to 0)),
 
             Questoes(5,"6. Como está distribuído o seu patrimônio?",
-                " Meu patrimônio não está aplicado ou está todo aplicado em renda  xa e/ou imóveis",
-                " Menos de 25% em renda variável e o restante em renda  xa e/ou imóveis",
+                " Meu patrimônio não está aplicado ou está todo aplicado em renda fixa e/ou imóveis",
+                " Menos de 25% em renda variável e o restante em renda fixa e/ou imóveis",
                 " Entre 25,01 e 50% aplicado em renda variável e o restante em renda fi xa e/ou imóveis",
                 " Acima de 50% em renda variável ","vazio",
                 gabarito = mapOf ("a" to 0, "b" to 2,"c" to 3,"d" to 4,"e" to 0)),
@@ -61,13 +61,13 @@ class QuestoesViewModel : ViewModel() {
                 " Não tenho intenção de resgatar no curto prazo e ainda pretendo fazer aplicações regulares","vazio",
                 gabarito = mapOf ("a" to 0, "b" to 2,"c" to 3,"d" to 4,"e" to 0)),
 
-            Questoes(7,"8. Indique em quais aplicações listadas abaixo você já investiu e qual a frequência nos últimos dois anos. Pode assinalar mais do que uma alternativa. Obs: Efetue a somatória dos pontos referente a questão acima e escolha a alternativa equivalente:",
+            Questoes(7,"8. Indique em quais aplicações listadas no <b>quadro 8</b> você já investiu e qual a frequência nos últimos dois anos. Pode assinalar mais do que uma alternativa. Obs: Efetue a somatória dos pontos referente a questão acima e escolha a alternativa equivalente:",
                 " Entre 0 e 1 ponto",
                 " Entre 2 e 4 pontos",
                 " Acima de 5 pontos","vazio","vazio",
                 gabarito = mapOf ("a" to 1, "b" to 2,"c" to 4,"d" to 0,"e" to 0)),
 
-            Questoes(8,"9. Tomando por base as respostas da questão anterior, informar o volume  aproximado que foi destinado a cada operação no período. Obs: Efetue a somatória dos pontos referente a questão acima e escolha a alternativa equivalente:",
+            Questoes(8,"9. Tomando por base as respostas da questão anterior, informar o volume aproximado que foi destinado a cada operação no período. Obs: Efetue a somatória dos pontos referente a questão acima e escolha a alternativa equivalente localizado no <b>Quadro 9</b>:",
                 " 1 ponto",
                 " Entre 2 e 6 pontos",
                 " Acima de 7 pontos","vazio","vazio",

@@ -96,6 +96,9 @@
         <action
             android:id="@+id/action_question_8_to_question_9"
             app:destination="@id/question_9" />
+        <action
+            android:id="@+id/action_question_8_to_imageQ8"
+            app:destination="@id/imageQ8" />
     </fragment>
     <fragment
         android:id="@+id/question_9"
@@ -108,6 +111,9 @@
         <action
             android:id="@+id/action_question_9_to_question_10"
             app:destination="@id/question_10" />
+        <action
+            android:id="@+id/action_question_9_to_imageQ9"
+            app:destination="@id/imageQ9" />
     </fragment>
     <fragment
         android:id="@+id/question_10"
@@ -129,5 +135,23 @@
         <action
             android:id="@+id/action_question_11_to_question_10"
             app:destination="@id/question_10" />
+    </fragment>
+    <fragment
+        android:id="@+id/imageQ8"
+        android:name="android.inflabnet.perfildoinvestidor.fragments.ImageQ8"
+        android:label="fragment_image_q8"
+        tools:layout="@layout/fragment_image_q8" >
+        <action
+            android:id="@+id/action_imageQ8_to_question_8"
+            app:destination="@id/question_8" />
+    </fragment>
+    <fragment
+        android:id="@+id/imageQ9"
+        android:name="android.inflabnet.perfildoinvestidor.fragments.ImageQ9"
+        android:label="fragment_image_q9"
+        tools:layout="@layout/fragment_image_q9" >
+        <action
+            android:id="@+id/action_imageQ9_to_question_9"
+            app:destination="@id/question_9" />
     </fragment>
 </navigation>
