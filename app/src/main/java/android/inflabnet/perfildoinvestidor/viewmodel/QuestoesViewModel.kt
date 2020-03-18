@@ -4,13 +4,14 @@ import android.inflabnet.perfildoinvestidor.model.Questoes
 import androidx.lifecycle.ViewModel
 
 class QuestoesViewModel : ViewModel() {
+    var nome : String? = null
     lateinit var questao: List<Questoes>
     var resultado : Int? = 0
     var respostas : MutableMap<String, Int?> = mutableMapOf()
 
     fun loadQuestoes(): List<Questoes> {
 
-        var allQuestions : List<Questoes> = listOf(
+        val allQuestions : List<Questoes> = listOf(
             Questoes(0,"1. Por quanto tempo você pretende deixar seu dinheiro investido?",
                 "a Menos de 6 meses",
                 "b Entre 6 meses e 1 ano",

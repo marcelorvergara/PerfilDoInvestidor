@@ -1,24 +1,36 @@
 package android.inflabnet.perfildoinvestidor.fragments
 
+import android.content.Intent
 import android.inflabnet.perfildoinvestidor.R
+import android.inflabnet.perfildoinvestidor.activities.ResultadoFinal
 import android.inflabnet.perfildoinvestidor.viewmodel.QuestoesViewModel
 import android.os.Bundle
 import android.util.Log
-import android.view.KeyEvent
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProviders
-import kotlinx.android.synthetic.main.fragment_question.*
+import kotlinx.android.synthetic.main.fragment_question.btnProxQuest
+import kotlinx.android.synthetic.main.fragment_question.radioGroup
+import kotlinx.android.synthetic.main.fragment_question.rbA
+import kotlinx.android.synthetic.main.fragment_question.rbB
+import kotlinx.android.synthetic.main.fragment_question.rbC
+import kotlinx.android.synthetic.main.fragment_question.rbD
+import kotlinx.android.synthetic.main.fragment_question.rbE
+import kotlinx.android.synthetic.main.fragment_question.txtQuestion
+import kotlinx.android.synthetic.main.fragment_question_11.*
 
 
 /**
  * A simple [Fragment] subclass.
  */
 class Question_11 : Fragment() {
+
     var soma : Int = 0
+    lateinit var resViewModel: QuestoesViewModel
+
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
@@ -39,7 +51,7 @@ class Question_11 : Fragment() {
         val a = 10
 
 
-        btnProxQuest.text = "Próxima questão"
+        btnProxQuest.text = "FINALIZAR"
 
         txtQuestion.text = listaQuestoes[a].pergunta
         rbA.text = listaQuestoes[a].questao_a
@@ -67,7 +79,9 @@ class Question_11 : Fragment() {
             rbE.text = listaQuestoes[a].questao_e
             rbE.visibility = View.VISIBLE
         }
-
+        questionsViewModel!!.respostas.forEach {
+            txtResult.text = questionsViewModel!!.respostas.values.toString()
+        }
         btnProxQuest.setOnClickListener {
             val checked = radioGroup.checkedRadioButtonId
             Log.i("CHE", checked.toString())
@@ -77,49 +91,41 @@ class Question_11 : Fragment() {
                 when (name) {
                     "rbA" -> {
                         soma= listaQuestoes[a].gabarito.getValue("a")
-                        Toast.makeText(
-                            this.context!!.applicationContext,
-                            soma.toString(),
-                            Toast.LENGTH_SHORT
-                        ).show()
+
                     }
                     "rbB" -> {
                         soma= listaQuestoes[a].gabarito.getValue("b")
-                        Toast.makeText(
-                            this.context!!.applicationContext,
-                            soma.toString(),
-                            Toast.LENGTH_SHORT
-                        ).show()
+
                     }
                     "rbC" -> {
                         soma= listaQuestoes[a].gabarito.getValue("c")
-                        Toast.makeText(
-                            this.context!!.applicationContext,
-                            soma.toString(),
-                            Toast.LENGTH_SHORT
-                        ).show()
+
                     }
                     "rbD" -> {
                         soma= listaQuestoes[a].gabarito.getValue("d")
-                        Toast.makeText(
-                            this.context!!.applicationContext,
-                            soma.toString(),
-                            Toast.LENGTH_SHORT
-                        ).show()
+
                     }
                     "rbE" -> {
                         soma= listaQuestoes[a].gabarito.getValue("e")
-                        Toast.makeText(
-                            this.context!!.applicationContext,
-                            soma.toString(),
-                            Toast.LENGTH_SHORT
-                        ).show()
+
                     }
                 }
                 questionsViewModel!!.respostas["Q11"] = soma
                 val ant = questionsViewModel!!.resultado
                 questionsViewModel!!.resultado = soma + ant!!
-                Toast.makeText(this.context!!.applicationContext,"RESULTADO ${questionsViewModel!!.resultado.toString()}", Toast.LENGTH_SHORT).show()
+
+                val resultadoTotal = questionsViewModel!!.resultado
+                val perfil : String
+                perfil = when(resultadoTotal){
+                    in 0..12 -> "Conservador"
+                    in 13..29 -> "Maderado"
+                    else -> "Arrojado"
+                }
+                //Toast.makeText(this.context!!.applicationContext, questionsViewModel!!.nome, Toast.LENGTH_SHORT).show()
+                val intt = Intent(this.context!!.applicationContext, ResultadoFinal::class.java)
+                intt.putExtra("results",perfil)
+                intt.putExtra("nome", questionsViewModel!!.nome)
+                startActivity(intt)
             }
             else Toast.makeText(this.context!!.applicationContext,"Você deve selecionar uma opção", Toast.LENGTH_SHORT).show()
 

@@ -14,6 +14,16 @@ import androidx.lifecycle.ViewModelProviders
 import androidx.navigation.fragment.NavHostFragment.findNavController
 import androidx.navigation.fragment.findNavController
 import kotlinx.android.synthetic.main.fragment_question.*
+import kotlinx.android.synthetic.main.fragment_question.btnProxQuest
+import kotlinx.android.synthetic.main.fragment_question.radioGroup
+import kotlinx.android.synthetic.main.fragment_question.rbA
+import kotlinx.android.synthetic.main.fragment_question.rbB
+import kotlinx.android.synthetic.main.fragment_question.rbC
+import kotlinx.android.synthetic.main.fragment_question.rbD
+import kotlinx.android.synthetic.main.fragment_question.rbE
+import kotlinx.android.synthetic.main.fragment_question.txtQuestion
+import kotlinx.android.synthetic.main.fragment_question_1.*
+
 
 /**
  * A simple [Fragment] subclass.
@@ -39,7 +49,7 @@ class Question_1 : Fragment() {
        }
 
         val listaQuestoes = questionsViewModel!!.loadQuestoes()
-        var a = 0
+        val a = 0
 
 
         btnProxQuest.text = "Próxima questão"
@@ -71,6 +81,12 @@ class Question_1 : Fragment() {
             rbE.visibility = View.VISIBLE
         }
 
+        if (questionsViewModel?.respostas?.values!!.isEmpty()) txtResult.text = "Resultados"
+        else {
+            questionsViewModel!!.respostas.forEach {
+                txtResult.text = questionsViewModel!!.respostas.values.toString()
+            }
+        }
         btnProxQuest.setOnClickListener {
             val checked = radioGroup.checkedRadioButtonId
 
@@ -80,53 +96,31 @@ class Question_1 : Fragment() {
                 when (name) {
                     "rbA" -> {
                         soma = listaQuestoes[a].gabarito.getValue("a")
-                        Toast.makeText(
-                            this.context!!.applicationContext,
-                            soma.toString(),
-                            Toast.LENGTH_SHORT
-                        ).show()
+
                     }
                     "rbB" -> {
                         soma = listaQuestoes[a].gabarito.getValue("b")
-                        Toast.makeText(
-                            this.context!!.applicationContext,
-                            soma.toString(),
-                            Toast.LENGTH_SHORT
-                        ).show()
+
                     }
                     "rbC" -> {
                         soma = listaQuestoes[a].gabarito.getValue("c")
-                        Toast.makeText(
-                            this.context!!.applicationContext,
-                            soma.toString(),
-                            Toast.LENGTH_SHORT
-                        ).show()
+
                     }
                     "rbD" -> {
                         soma = listaQuestoes[a].gabarito.getValue("d")
-                        Toast.makeText(
-                            this.context!!.applicationContext,
-                            soma.toString(),
-                            Toast.LENGTH_SHORT
-                        ).show()
+
                     }
                     "rbE" -> {
                         soma = listaQuestoes[a].gabarito.getValue("e")
-                        Toast.makeText(
-                            this.context!!.applicationContext,
-                            soma.toString(),
-                            Toast.LENGTH_SHORT
-                        ).show()
                     }
                 }
                 questionsViewModel!!.respostas["Q1"] = soma
                 questionsViewModel!!.resultado = soma
-                Toast.makeText(this.context!!.applicationContext,"000 ${questionsViewModel!!.resultado.toString()}", Toast.LENGTH_SHORT).show()
+                Toast.makeText(this.context!!.applicationContext,"Nome ${questionsViewModel?.nome}", Toast.LENGTH_SHORT).show()
                 findNavController().navigate(R.id.action_question_1_to_question_2)
             }
             else Toast.makeText(this.context!!.applicationContext,"Você deve selecionar uma opção", Toast.LENGTH_SHORT).show()
-
-        }
+            }
 
 
     }

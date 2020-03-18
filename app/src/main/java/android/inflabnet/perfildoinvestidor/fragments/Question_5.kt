@@ -13,6 +13,15 @@ import android.widget.Toast
 import androidx.lifecycle.ViewModelProviders
 import androidx.navigation.fragment.findNavController
 import kotlinx.android.synthetic.main.fragment_question.*
+import kotlinx.android.synthetic.main.fragment_question.btnProxQuest
+import kotlinx.android.synthetic.main.fragment_question.radioGroup
+import kotlinx.android.synthetic.main.fragment_question.rbA
+import kotlinx.android.synthetic.main.fragment_question.rbB
+import kotlinx.android.synthetic.main.fragment_question.rbC
+import kotlinx.android.synthetic.main.fragment_question.rbD
+import kotlinx.android.synthetic.main.fragment_question.rbE
+import kotlinx.android.synthetic.main.fragment_question.txtQuestion
+import kotlinx.android.synthetic.main.fragment_question_5.*
 
 /**
  * A simple [Fragment] subclass.
@@ -68,7 +77,9 @@ class Question_5 : Fragment() {
             rbE.text = listaQuestoes[a].questao_e
             rbE.visibility = View.VISIBLE
         }
-
+        questionsViewModel!!.respostas.forEach {
+            txtResult.text = questionsViewModel!!.respostas.values.toString()
+        }
         btnProxQuest.setOnClickListener {
             val checked = radioGroup.checkedRadioButtonId
             Log.i("CHE", checked.toString())
@@ -78,49 +89,30 @@ class Question_5 : Fragment() {
                 when (name) {
                     "rbA" -> {
                         soma = listaQuestoes[a].gabarito.getValue("a")
-                        Toast.makeText(
-                            this.context!!.applicationContext,
-                            soma.toString(),
-                            Toast.LENGTH_SHORT
-                        ).show()
+
                     }
                     "rbB" -> {
                         soma = listaQuestoes[a].gabarito.getValue("b")
-                        Toast.makeText(
-                            this.context!!.applicationContext,
-                            soma.toString(),
-                            Toast.LENGTH_SHORT
-                        ).show()
+
                     }
                     "rbC" -> {
                         soma = listaQuestoes[a].gabarito.getValue("c")
-                        Toast.makeText(
-                            this.context!!.applicationContext,
-                            soma.toString(),
-                            Toast.LENGTH_SHORT
-                        ).show()
+
                     }
                     "rbD" -> {
                         soma = listaQuestoes[a].gabarito.getValue("d")
-                        Toast.makeText(
-                            this.context!!.applicationContext,
-                            soma.toString(),
-                            Toast.LENGTH_SHORT
-                        ).show()
+
                     }
                     "rbE" -> {
                         soma = listaQuestoes[a].gabarito.getValue("e")
-                        Toast.makeText(
-                            this.context!!.applicationContext,
-                            soma.toString(),
-                            Toast.LENGTH_SHORT
-                        ).show()
+
                     }
                 }
                 questionsViewModel!!.respostas["Q5"] = soma
                 val ant = questionsViewModel!!.resultado
                 if (soma != null) questionsViewModel!!.resultado = soma + ant!!
-                Toast.makeText(this.context!!.applicationContext,"DDD ${questionsViewModel!!.resultado.toString()}", Toast.LENGTH_SHORT).show()
+                //Toast.makeText(this.context!!.applicationContext,"DDD ${questionsViewModel!!.resultado.toString()}", Toast.LENGTH_SHORT).show()
+
                 findNavController().navigate(R.id.action_question_5_to_question_6)
             }
             else Toast.makeText(this.context!!.applicationContext,"Você deve selecionar uma opção", Toast.LENGTH_SHORT).show()

@@ -7,7 +7,7 @@
     tools:context=".activities.QuestionActivity">
 
     <TextView
-        android:id="@+id/txtNome"
+        android:id="@+id/txtNomeResult"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
@@ -27,6 +27,6 @@
         app:defaultNavHost="true"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txtNome"
+        app:layout_constraintTop_toBottomOf="@+id/txtNomeResult"
         app:navGraph="@navigation/navigator_host" />
 </androidx.constraintlayout.widget.ConstraintLayout>
