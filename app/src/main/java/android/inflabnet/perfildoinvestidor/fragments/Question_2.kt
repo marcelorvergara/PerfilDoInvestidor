@@ -51,8 +51,14 @@ class Question_2 : Fragment() {
         val listaQuestoes = questionsViewModel!!.loadQuestoes()
         val a = 1
 
+        btnVoltar.setOnClickListener {
+            val tot = questionsViewModel?.respostas?.size
+            val key = "Q"+tot
+            questionsViewModel?.respostas?.remove(key)
+            findNavController().navigate(R.id.action_question_2_to_question_1)
+        }
 
-        btnProxQuest.text = "Próxima questão"
+        btnProxQuest2.text = "Próxima questão"
 
         txtQuestion.text = listaQuestoes[a].pergunta
         rbA.text = listaQuestoes[a].questao_a
@@ -83,7 +89,7 @@ class Question_2 : Fragment() {
         questionsViewModel!!.respostas.forEach {
             txtResult.text = questionsViewModel!!.respostas.values.toString()
         }
-        btnProxQuest.setOnClickListener {
+        btnProxQuest2.setOnClickListener {
             val checked = radioGroup.checkedRadioButtonId
             Log.i("CHE", checked.toString())
             if (checked != -1) {

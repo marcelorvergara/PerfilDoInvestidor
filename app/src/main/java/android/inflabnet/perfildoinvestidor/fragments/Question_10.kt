@@ -47,6 +47,12 @@ class Question_10 : Fragment() {
         val listaQuestoes = questionsViewModel!!.loadQuestoes()
         val a = 9
 
+        btnVoltar.setOnClickListener {
+            val tot = questionsViewModel?.respostas?.size
+            val key = "Q"+tot
+            questionsViewModel?.respostas?.remove(key)
+            findNavController().navigate(R.id.action_question_10_to_question_9)
+        }
 
         btnProxQuest.text = "Próxima questão"
 

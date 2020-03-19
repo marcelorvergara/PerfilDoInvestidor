@@ -7,6 +7,8 @@ import android.view.View
 import android.view.ViewGroup
 
 import android.inflabnet.perfildoinvestidor.R
+import android.widget.Toast
+import androidx.activity.addCallback
 import androidx.navigation.fragment.findNavController
 import kotlinx.android.synthetic.main.fragment_image_q9.*
 
@@ -21,6 +23,19 @@ class ImageQ9 : Fragment() {
     ): View? {
         // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_image_q9, container, false)
+    }
+
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+
+        // This callback will only be called when MyFragment is at least Started.
+        val callback = requireActivity().onBackPressedDispatcher.addCallback(this) {
+            // Handle the back button event
+            Toast.makeText(context!!.applicationContext,"Por Favor, aperte o botão VOLTAR",Toast.LENGTH_SHORT).show()
+            //findNavController().navigate(R.id.action_imageQ9_to_question_9)
+        }
+
+        // The callback can be enabled or disabled here or in the lambda
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {

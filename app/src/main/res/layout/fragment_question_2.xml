@@ -66,7 +66,7 @@
     </RadioGroup>
 
     <Button
-        android:id="@+id/btnProxQuest"
+        android:id="@+id/btnProxQuest2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="64dp"
@@ -97,5 +97,16 @@
         android:layout_marginTop="24dp"
         android:text="TextView"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btnProxQuest" />
+        app:layout_constraintTop_toBottomOf="@+id/btnProxQuest2" />
+
+    <Button
+        android:id="@+id/btnVoltar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginLeft="24dp"
+        android:layout_marginTop="24dp"
+        android:text="Voltar"
+        app:layout_constraintStart_toEndOf="@+id/btnProxQuest2"
+        app:layout_constraintTop_toBottomOf="@+id/btnOk2" />
 </androidx.constraintlayout.widget.ConstraintLayout>

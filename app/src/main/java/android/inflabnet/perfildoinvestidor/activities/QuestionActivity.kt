@@ -29,17 +29,13 @@ class QuestionActivity : AppCompatActivity() {
         val count = supportFragmentManager.backStackEntryCount
 
         if (count == 0) {
+
+
             super.onBackPressed();
             //remover questão respondida
             val tot = questionsViewModel?.respostas?.size
             val key = "Q"+tot
             questionsViewModel?.respostas?.remove(key)
-            //val remover = questionsViewModel!!.respostas.getValue(key)
-            //Log.i("TESTE", remover.toString())
-            Log.i("TESTE", key)
-            Log.i("TESTE", questionsViewModel?.respostas.toString())
-
-
 
         } else {
             supportFragmentManager.popBackStack();

@@ -12,6 +12,7 @@ import android.view.ViewGroup
 import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProviders
+import androidx.navigation.fragment.findNavController
 import kotlinx.android.synthetic.main.fragment_question.btnProxQuest
 import kotlinx.android.synthetic.main.fragment_question.radioGroup
 import kotlinx.android.synthetic.main.fragment_question.rbA
@@ -50,6 +51,12 @@ class Question_11 : Fragment() {
         val listaQuestoes = questionsViewModel!!.loadQuestoes()
         val a = 10
 
+        btnVoltar.setOnClickListener {
+            val tot = questionsViewModel?.respostas?.size
+            val key = "Q"+tot
+            questionsViewModel?.respostas?.remove(key)
+            findNavController().navigate(R.id.action_question_11_to_question_10)
+        }
 
         btnProxQuest.text = "FINALIZAR"
 
