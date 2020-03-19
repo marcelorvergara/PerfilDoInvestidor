@@ -23,7 +23,7 @@ class MainActivity : AppCompatActivity() {
 
             val questionsViewModel = ViewModelProviders.of(this).get(QuestoesViewModel::class.java)
             questionsViewModel.nome = nome
-            Toast.makeText(this,questionsViewModel.nome ,Toast.LENGTH_SHORT).show()
+            //Toast.makeText(this,questionsViewModel.nome ,Toast.LENGTH_SHORT).show()
 
             val intt = Intent(this, QuestionActivity::class.java)
             intt.putExtra("user", nome)

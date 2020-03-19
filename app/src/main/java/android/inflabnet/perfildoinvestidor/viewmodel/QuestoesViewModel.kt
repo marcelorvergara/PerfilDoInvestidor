@@ -61,13 +61,13 @@ class QuestoesViewModel : ViewModel() {
                 " Não tenho intenção de resgatar no curto prazo e ainda pretendo fazer aplicações regulares","vazio",
                 gabarito = mapOf ("a" to 0, "b" to 2,"c" to 3,"d" to 4,"e" to 0)),
 
-            Questoes(7,"8. Indique em quais aplicações listadas no <b>quadro 8</b> você já investiu e qual a frequência nos últimos dois anos. Pode assinalar mais do que uma alternativa. Obs: Efetue a somatória dos pontos referente a questão acima e escolha a alternativa equivalente:",
+            Questoes(7,"8. Indique em quais aplicações listadas no quadro 8 você já investiu e qual a frequência nos últimos dois anos. Pode assinalar mais do que uma alternativa. Obs: Efetue a somatória dos pontos referente a questão acima e escolha a alternativa equivalente:",
                 " Entre 0 e 1 ponto",
                 " Entre 2 e 4 pontos",
                 " Acima de 5 pontos","vazio","vazio",
                 gabarito = mapOf ("a" to 1, "b" to 2,"c" to 4,"d" to 0,"e" to 0)),
 
-            Questoes(8,"9. Tomando por base as respostas da questão anterior, informar o volume aproximado que foi destinado a cada operação no período. Obs: Efetue a somatória dos pontos referente a questão acima e escolha a alternativa equivalente localizado no <b>Quadro 9</b>:",
+            Questoes(8,"9. Tomando por base as respostas da questão anterior, informar o volume aproximado que foi destinado a cada operação no período. Obs: Efetue a somatória dos pontos referente a questão acima e escolha a alternativa equivalente localizado no Quadro 9:",
                 " 1 ponto",
                 " Entre 2 e 6 pontos",
                 " Acima de 7 pontos","vazio","vazio",

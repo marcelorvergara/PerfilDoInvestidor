@@ -11,4 +11,9 @@
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="iniciar">Clique em iniciar para começar a avaliação</string>
+    <string name="nome">Nome:</string>
+    <string name="textview">TextView</string>
+    <string name="textview">TextView</string>
+    <string name="perfil">Perfil:</string>
+    <string name="logo_banco">Logo_Banco</string>
 </resources>

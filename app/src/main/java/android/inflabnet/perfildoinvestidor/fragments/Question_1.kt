@@ -116,7 +116,7 @@ class Question_1 : Fragment() {
                 }
                 questionsViewModel!!.respostas["Q1"] = soma
                 questionsViewModel!!.resultado = soma
-                Toast.makeText(this.context!!.applicationContext,"Nome ${questionsViewModel?.nome}", Toast.LENGTH_SHORT).show()
+                //Toast.makeText(this.context!!.applicationContext,"Nome ${questionsViewModel?.nome}", Toast.LENGTH_SHORT).show()
                 findNavController().navigate(R.id.action_question_1_to_question_2)
             }
             else Toast.makeText(this.context!!.applicationContext,"Você deve selecionar uma opção", Toast.LENGTH_SHORT).show()

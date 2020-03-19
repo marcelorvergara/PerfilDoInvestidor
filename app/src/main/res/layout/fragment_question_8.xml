@@ -69,11 +69,11 @@
         android:id="@+id/btnProxQuest"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="32dp"
-        android:layout_marginLeft="32dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginStart="64dp"
+        android:layout_marginLeft="64dp"
+        android:layout_marginTop="24dp"
         android:text="Iniciar"
-        app:layout_constraintStart_toEndOf="@+id/btnOk"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/radioGroup" />
 
     <Button
@@ -82,10 +82,9 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
         android:layout_marginLeft="32dp"
-        android:layout_marginTop="32dp"
         android:text="QUADRO 8"
-        app:layout_constraintStart_toEndOf="@+id/btnProxQuest"
-        app:layout_constraintTop_toBottomOf="@+id/txtQuestion" />
+        app:layout_constraintBaseline_toBaselineOf="@+id/btnProxQuest"
+        app:layout_constraintStart_toEndOf="@+id/btnProxQuest" />
 
     <Button
         android:id="@+id/btnOk2"
@@ -103,10 +102,10 @@
         android:id="@+id/txtResult"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="32dp"
-        android:layout_marginLeft="32dp"
-        android:layout_marginTop="38dp"
+        android:layout_marginStart="64dp"
+        android:layout_marginLeft="64dp"
+        android:layout_marginTop="24dp"
         android:text="TextView"
-        app:layout_constraintStart_toEndOf="@+id/btnProxQuest"
-        app:layout_constraintTop_toBottomOf="@+id/btnQuadro8" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnProxQuest" />
 </androidx.constraintlayout.widget.ConstraintLayout>
