@@ -1,5 +1,6 @@
 package android.inflabnet.perfildoinvestidor.activities
 
+import android.content.Intent
 import android.inflabnet.perfildoinvestidor.R
 import android.inflabnet.perfildoinvestidor.viewmodel.QuestoesViewModel
 import androidx.appcompat.app.AppCompatActivity
@@ -19,5 +20,11 @@ class ResultadoFinal : AppCompatActivity() {
         txtResResultado.text = res
         val nom = intent.getStringExtra("nome")
         txtResNome.text = nom
+
+        btnNovoTeste.setOnClickListener {
+            val intt = Intent(this, MainActivity::class.java)
+            //intt.putExtra("user", nome)
+            startActivity(intt)
+        }
     }
 }
