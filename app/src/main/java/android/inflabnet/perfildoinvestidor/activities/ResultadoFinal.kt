@@ -51,7 +51,7 @@ class ResultadoFinal : AppCompatActivity() {
                 shareIntent.action = Intent.ACTION_SEND
                 shareIntent.putExtra(Intent.EXTRA_EMAIL, destinos)
                 shareIntent.putExtra(Intent.EXTRA_SUBJECT, "Analise de Investimento de $nom")
-                shareIntent.putExtra(Intent.EXTRA_TEXT, "O meu perfil aferido foi $resultado")
+                shareIntent.putExtra(Intent.EXTRA_TEXT, "O perfil aferido foi $resultado")
                 startActivity(Intent.createChooser(shareIntent, "Compartilhar via"))
             } catch (e: Exception) {
                 Toast.makeText(this, "Cliente de e-mail não disponível", Toast.LENGTH_SHORT).show()
