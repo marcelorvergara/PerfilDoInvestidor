@@ -9,8 +9,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".activities.ResultadoFinal"></activity>
-        <activity android:name=".activities.ResultActivity" />
+        <activity android:name=".activities.ResultadoFinal"/>
         <activity android:name=".activities.QuestionActivity" />
         <activity android:name=".activities.MainActivity">
             <intent-filter>
@@ -24,5 +23,5 @@
             android:name="preloaded_fonts"
             android:resource="@array/preloaded_fonts" />
     </application>
-
+    <uses-permission android:name="android.permission.INTERNET" />
 </manifest>
