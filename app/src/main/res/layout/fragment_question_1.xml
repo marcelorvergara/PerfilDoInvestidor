@@ -4,7 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".fragments.Question_1" >
+    android:layout_marginRight="22dip"
+    tools:context=".fragments.Question_1">
 
     <TextView
         android:id="@+id/txtQuestion"
@@ -16,6 +17,10 @@
         android:text="@string/iniciar"
         android:textSize="18sp"
         android:textStyle="bold"
+        app:autoSizeMaxTextSize="100sp"
+        app:autoSizeMinTextSize="12sp"
+        app:autoSizeStepGranularity="2sp"
+        app:autoSizeTextType="uniform"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 

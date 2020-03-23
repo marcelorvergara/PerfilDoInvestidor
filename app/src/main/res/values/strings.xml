@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Perfil Do Investidor - Bando Paulista</string>
+    <string name="app_name">Perfil Do Investidor - Banco Paulista</string>
     <string name="txtExplic">O Banco Paulista, em atendimento às exigências regulatórias, elaborou o Questionário API com objetivo de auxiliá-lo a identificar seu perfil de investidor (conservador, moderado ou arrojado) e recomendar os investimentos mais alinhados a esse perfil. Para cada questão, escolha a alternativa que mais se aproxima dos seus objetivos e expectativas de investimento.\n\n
     *aplicativo para fins acadêmicos</string>
     <string name="txtTitulo">Analisador de Perfil de Investimento</string>

@@ -26,7 +26,7 @@ class QuestoesViewModel : ViewModel() {
                 " Obter no curto prazo retornos elevados e signi cativamente acima da taxa de retorno média do mercado, assumindo riscos elevados","vazio",
                 gabarito = mapOf ("a" to 0, "b" to 2,"c" to 4,"d" to 5,"e" to 0)),
 
-            Questoes(2,"3. Qual das alternativas melhor classica sua formação e experiência com o mercado financeiro?",
+            Questoes(2,"3. Qual das alternativas melhor classifica sua formação e experiência com o mercado financeiro?",
                 " Não possuo formação acadêmica ou conhecimento do mercado fnanceiro",
                 " Possuo formação acadêmica na área financeira, mas não tenho experiência com o mercado fnanceiro",
                 " Possuo formação acadêmica em outra área, mas possuo conhecimento do mercado fnanceiro",
